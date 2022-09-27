@@ -136,3 +136,23 @@ function createArrayOfArrays(arr)
     }
 
     addUserSkill(users, "Java", "Afreen")
+
+    function editUser(users,userName, valueToBEChange, newValue)
+    {
+        users.map((e)=>{
+            if(e.name==userName)
+            {
+                Object.keys(e).forEach((key)=>{
+                    if(key==valueToBEChange)
+                    {  
+                        e[key]=newValue
+                       
+                       
+                    }
+                })
+            }
+         });
+         return console.log(users);
+    }
+
+    editUser(users, "Afreen","age",26)
