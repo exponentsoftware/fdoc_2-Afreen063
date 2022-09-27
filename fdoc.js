@@ -122,3 +122,17 @@ function createArrayOfArrays(arr)
 		age:16
     }
     addUser(users,usersdata)
+
+    function addUserSkill(users, skill, userName)
+    {
+        let check=0;
+        users.map((e)=>{
+           if(e.name==userName)
+           {
+               e.skills.push(skill)
+           }
+        });
+        return console.log(users)
+    }
+
+    addUserSkill(users, "Java", "Afreen")
